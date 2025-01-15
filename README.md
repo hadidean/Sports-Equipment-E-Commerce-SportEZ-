@@ -18,8 +18,6 @@ Step 7: By pressing the add to cart user will be leaded to the checkout page
 
 Step 8: User may also go back to the product page through the menu and select more products
 
-Step 9: The user may apply vounchers (DISCOUNT10, FLAT20, FREEDELIVERY) to get discounts
+Step 9: If the user is done they may checkout using the checkout button
 
-Step 10: If the user is done they may checkout using the checkout button
-
-Step 11: The user fills the details in the contact page and click "Send Message"
+Step 10: The user fills the details in the contact page and click "Send Message"
