@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page with Shopping Cart</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+         <!-- LOGO -->
+         <div id="header-logo">
+            <a href="dashboard.html"><img src="images/logo.png" alt="" /></a>
+        </div>  
+
+        <!-- NAVIGATION MENU -->
+        <div id="sideNav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Product</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menuBtn">
+            <img src="Images/menu.png" id="menu" alt="">
+        </div>
+    </header>
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+
+        sideNav.style.right = "-240px";
+        menuBtn.onclick = function(){
+            if(sideNav.style.right == "-240px"){
+                sideNav.style.right = "0";
+                menu.src = "Images/close.png";
+            }
+            else{
+                sideNav.style.right = "-240px";
+                menu.src = "Images/menu.png";
+            }
+        }
+    </script>
+
+    <main>
+        <!-- CART -->
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Image</th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Items will be dynamically added here -->
+                </tbody>
+            </table>
+            <button id="remove-selected">REMOVE SELECTED ITEMS</button>
+            <p>Total: RM <span id="total-price">0.00</span></p>
+        </section>
+        
+
+        <section id="voucher">
+            <!-- VOUCHER -->
+            <h2>Apply Vouchers</h2>
+            <input type="text" id="voucher-code" placeholder="Enter voucher code">
+            <button id="apply-voucher">APPLY</button>
+            <p id="voucher-message"></p>
+            <p id="voucher-description"></p>
+        </section>
+
+        <section id="checkout">
+            <!-- CHECKOUT -->
+            <h2>Payment Details</h2>
+            <div id="payment-details">
+                <p>Merchandise subtotal: <span id="merchandise-subtotal">RM 0.00</span></p>
+                <p>Shipping Fee: <span id="shipping-fee">RM 0.00</span></p>
+                <p>Voucher Discount: <span id="voucher-discount">- RM 0.00</span></p>
+                <p id="total">TOTAL: <span id="total-amount">RM 0.00</span></p>
+            </div>
+            <button id="checkout-button">CHECKOUT</button>
+        </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>

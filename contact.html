@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+<!--HEADER-->
+    <header>
+        <!-- LOGO -->
+        <div id="header-logo">
+            <a href="dashboard.html"><img src="images/logo.png" alt="" /></a>
+        </div>  
+
+        <!-- NAVIGATION MENU -->
+        <div id="sideNav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Product</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menuBtn">
+            <img src="Images/menu.png" id="menu" alt="">
+        </div>
+    </header>
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+
+        sideNav.style.right = "-240px";
+        menuBtn.onclick = function(){
+            if(sideNav.style.right == "-240px"){
+                sideNav.style.right = "0";
+                menu.src = "Images/close.png";
+            }
+            else{
+                sideNav.style.right = "-240px";
+                menu.src = "Images/menu.png";
+            }
+        }
+    </script>
+
+    <!--CONTACT PAGE-->
+    <div class="banner-text">
+        <h1>Reach Us</h1>
+        <p>We would love to respond to your queries and help you succeed. Feel free to get in touch with us.</p>
+    </div>
+
+    <div class="container">
+        <div class="contact-box">
+            <div class="contact-left">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Your Subject" required>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" name="message" placeholder="Your Message..." required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-right">
+                <h2>Reach Us</h2>
+                <img src="images/contact.jpg" alt="Contact Us">
+                <table>
+                    <tr>
+                        <td><img src="images/email.png" alt="Email Icon" class="email-icon"></td>
+                        <td>SportEZ@example.com</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/phone.png" alt="Phone Icon" class="phone-icon"></td>
+                        <td>+60 4161 9393</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/address.png" alt="Address Icon" class="address-icon"></td>
+                        <td>International Islamic University Malaysia<br>Jln Gombak, 53100 Kuala Lumpur, Selangor</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="contact.js"></script>
+</body>
+
+</html>

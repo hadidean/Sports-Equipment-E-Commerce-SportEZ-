@@ -1,0 +1,17 @@
+[
+    {
+        "code": "DISCOUNT10",
+        "type": "percentage",
+        "value": 10
+    },
+    {
+        "code": "FLAT20",
+        "type": "flat",
+        "value": 20
+    },
+    {
+        "code": "FREEDELIVERY",
+        "type": "freeShipping",
+        "value": 0
+    }
+]

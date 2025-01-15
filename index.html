@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css"> 
+</head>
+<body>
+    <section id="banner">
+        <img src="Images/logo.png" alt="" class="logo">
+        <div class="banner-text">
+        <h1>SportEZ</h1>
+        <p>SportEZ is a one-stop shariah shop for all your sports equipment and accessories. </p>
+        <div class="banner-btn">
+            <a href="dashboard.html"><span></span>Explore More</a>
+    </div>
+    </section>
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Product</a></li>
+                <li><a href="AZRIcheckout.html">Checkout</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menuBtn">
+        <img src="Images/menu.png" id="menu" alt="">
+    </div>
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+
+        sideNav.style.right = "-240px";
+        menuBtn.onclick = function(){
+            if(sideNav.style.right == "-240px"){
+                sideNav.style.right = "0";
+                menu.src = "Images/close.png";
+            }
+            else{
+                sideNav.style.right = "-240px";
+                menu.src = "Images/menu.png";
+            }
+        }
+
+    </script>
+    
+
+</body>
+</html>

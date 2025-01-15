@@ -1,0 +1,247 @@
+/* General Styles */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  background: linear-gradient(to right, #ffffe0, #ffc0cb); /* Gradient with three color stops */
+  font-family: "Bebas Neue", serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #ffffe0, #ffc0cb);
+    padding: 68px 30px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#header-logo img {
+    width: 200px;
+    position: absolute;
+    top: 3%;
+    left: 10%;
+}
+
+/*NAVIGATION*/
+#sideNav{
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: linear-gradient(to right, #ffe0e5, #f0f8ff);
+    z-index: 2;
+    transition: .5s;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+
+nav ul li a{
+    font-family: "Bebas Neue", serif;
+    text-decoration: none;
+    color: #000000;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+/*MENU icon Button*/
+#menuBtn{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+#menuBtn img{
+    width: 50px;
+    margin-top: 15px;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#cart {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.item-select {
+    width: 20px;
+    height: 20px;
+    accent-color: #d9534f; /* Red color for the checkbox */
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+    transition: all 0.3s ease;
+}
+
+.item-select:hover {
+    border-color: #c9302c; /* Darker red border on hover */
+}
+
+.item-select:checked {
+    box-shadow: 0 0 5px 1px rgba(217, 83, 79, 0.5); /* Glow effect when checked */
+}
+
+#remove-selected {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    
+}
+
+#remove-selected:hover {
+    background: #c9302c;
+}
+
+#voucher {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#checkout {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#cart h2, #voucher h2, #checkout h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+table th, table td {
+    padding: 0.5rem;
+    text-align: left;
+    vertical-align: middle;
+}
+
+table th {
+    border-bottom: 1px solid #ddd;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-control button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.quantity-control input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.quantity-control button:hover {
+    background-color: #bbb;
+}
+
+#voucher input {
+    width: 80%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#voucher button {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#voucher button:hover {
+    background: #c9302c;
+}
+
+#checkout button {
+    background: #d9534f;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#checkout button:hover {
+    background: #c9302c;
+}
+
+#payment-details {
+    background: #f3f3f3;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#payment-details p {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for your purchase! Your order has been placed successfully. Return to the dashboard to explore more.">
+  <title>Thank You</title>
+  <link rel="stylesheet" href="thankyou.css">
+</head>
+<body>
+  <header>
+    <!-- LOGO -->
+    <div id="header-logo">
+        <a href="dashboard.html"><img src="images/logo.png" alt="" /></a>
+    </div>  
+
+    <!-- NAVIGATION MENU -->
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Product</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menuBtn">
+        <img src="Images/menu.png" id="menu" alt="">
+    </div>
+</header>
+
+<script>
+    var menuBtn = document.getElementById("menuBtn");
+    var sideNav = document.getElementById("sideNav");
+
+    sideNav.style.right = "-240px";
+    menuBtn.onclick = function(){
+        if(sideNav.style.right == "-240px"){
+            sideNav.style.right = "0";
+            menu.src = "Images/close.png";
+        }
+        else{
+            sideNav.style.right = "-240px";
+            menu.src = "Images/menu.png";
+        }
+    }
+</script>
+  <main>
+    <section>
+      <p>Your order has been placed successfully.</p>
+      <a href="index.html" aria-label="Return to the main dashboard page">Go Back to Dashboard</a>
+    </section>
+  </main>
+</body>
+</html>
+

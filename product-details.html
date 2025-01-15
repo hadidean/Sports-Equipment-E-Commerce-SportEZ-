@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="product-details.css">
+</head>
+<body>
+<!--HEADER-->
+<header><div id="header-logo">
+        <a href="dashboard.html"><img src="images/logo.png" alt="" /></a>
+    </div>  
+    <!-- SEARCH SECTION -->
+    <input type="text" id="search-bar" placeholder="Search for equipments and accessories">
+    <!-- NAVIGATION MENU -->
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Product</a></li>
+                
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- MENU BUTTON -->
+    <div id="menuBtn">
+        <img src="Images/menu.png" id="menu" alt="">
+    </div>
+  </header>
+
+  <main>
+    <section id="product-details">
+      <!-- Product details dynamically populated using JavaScript -->
+    </section>
+
+    <section id="reviews-section">
+      <h2>Reviews</h2>
+      <div id="reviews-list">
+        <!-- Reviews will be dynamically inserted here -->
+      </div>
+
+      <h3>Write a Review</h3>
+<form id="review-form">
+  <label for="rating">Rating:</label>
+  <div id="review-stars" class="stars">
+    <!-- Star elements will be inserted here dynamically -->
+  </div>
+  <label for="review-text">Review:</label>
+  <textarea id="review-text" rows="4" required></textarea>
+  <button type="submit">Submit Review</button>
+</form>
+
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="product-details.js"></script>
+</body>
+</html>
