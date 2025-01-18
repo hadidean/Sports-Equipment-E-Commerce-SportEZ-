@@ -58,5 +58,20 @@
   <div id="product-grid"></div>
   <script src="data.js"></script>
   <script src="dashboard.js"></script>
+  <script>
+    var menuBtn = document.getElementById("menuBtn");
+    var sideNav = document.getElementById("sideNav");
+
+    sideNav.style.right = "-240px";
+    menuBtn.onclick = function(){
+        if(sideNav.style.right == "-240px"){
+            sideNav.style.right = "0";
+            menu.src = "Images/close.png";
+        }
+        else{
+            sideNav.style.right = "-240px";
+            menu.src = "Images/menu.png";
+        }
+    }
 </body>
 </html>
